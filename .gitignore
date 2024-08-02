@@ -1,0 +1,12 @@
+.idea/*
+*.pyc
+
+.DS_Store
+.ipynb_checkpoints
+node_modules
+*.log
+versions
+*.zip
+*.dex
+*dex.cache
+*.bin
