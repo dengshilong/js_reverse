@@ -3,10 +3,10 @@ import time
 
 import requests
 import json
-def generate_cookies():
+def generate_cookies(name):
     """
     """
-    response = requests.get('http://%s/test' % '127.0.0.1:5000', timeout=20)
+    response = requests.post('http://%s/test' % '127.0.0.1:5000', data={'name': name}, timeout=20)
     return response.json()
 
 
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     n = 1000000
     start_time = time.time()
     for i in range(n):
-        data = generate_cookies()
+        data = generate_cookies('haha')
         time.sleep(0.001)
         print(i)
         print(data)

@@ -11,9 +11,10 @@ server.keepAliveTimeout = 70000;
 console.log("server start...")
 
 //Object.freeze(console)
-app.get("/test", (req, res) => {
+app.post("/test", (req, res) => {
     try {
-        result = disableConsole.disableConsole()
+        let name = req.body.name
+        result = disableConsole.disableConsole(name)
 //        global.console = undefined;
         res.send({ code: 0,'data':result})
     } catch (err) {

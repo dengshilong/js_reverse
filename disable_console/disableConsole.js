@@ -1,4 +1,4 @@
-function disableConsole() {
+function disableConsole(name) {
     var _0x2291d5 = (function () {
         var _0x56d0b1 = !![];
         return function (_0x2b4e73, _0x2ef7c2) {
@@ -43,6 +43,6 @@ function disableConsole() {
     });
     _0xdfcf0a();
     console['log']('Hello\x20World!');
-    return {"test": "test"}
+    return {"test": name}
 }
 module.exports = {disableConsole};
